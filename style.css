@@ -1,0 +1,112 @@
+:root {
+    --crimson: #8b1a1a;
+    --crimson-deep: #5c1010;
+    --gold: #c9a227;
+    --gold-bright: #e8c547;
+    --gold-muted: #b8962e;
+    --ivory: #faf7f2;
+    --white: #ffffff;
+    --text: #3a1f1f;
+    --shadow: rgba(92, 16, 16, 0.18);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Georgia, "Times New Roman", serif;
+    background:
+        radial-gradient(ellipse at top, #a32222 0%, var(--crimson-deep) 55%, #3a0a0a 100%);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 1.25rem;
+}
+
+h1 {
+    color: var(--white);
+    font-size: 2.15rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-align: center;
+    margin-bottom: 1.75rem;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 0.7rem;
+}
+
+#quiz {
+    width: min(640px, 100%);
+    background: var(--ivory);
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+    box-shadow:
+        0 0 0 4px var(--crimson),
+        0 18px 40px var(--shadow);
+    padding: 2.25rem 2rem 2rem;
+}
+
+#question {
+    color: var(--crimson-deep);
+    font-size: 1.28rem;
+    font-weight: 600;
+    line-height: 1.45;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(201, 162, 39, 0.45);
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#options button {
+    appearance: none;
+    font-family: inherit;
+    font-size: 1rem;
+    text-align: left;
+    color: var(--crimson-deep);
+    background: var(--white);
+    border: 1px solid rgba(139, 26, 26, 0.22);
+    border-left: 4px solid var(--gold);
+    border-radius: 4px;
+    padding: 0.85rem 1.1rem;
+    cursor: pointer;
+    transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.12s ease;
+}
+
+#options button:hover {
+    background: var(--crimson);
+    color: var(--white);
+    border-color: var(--crimson);
+    border-left-color: var(--gold-bright);
+    transform: translateX(3px);
+}
+
+#options button:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+}
+
+#options button:active {
+    background: var(--crimson-deep);
+}
+
+#result {
+    width: min(640px, 100%);
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--gold-bright);
+    min-height: 1.5em;
+}
